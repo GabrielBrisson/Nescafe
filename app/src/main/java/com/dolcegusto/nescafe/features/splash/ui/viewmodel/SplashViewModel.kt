@@ -1,4 +1,7 @@
 package com.dolcegusto.nescafe.features.splash.ui.viewmodel
 
-class SplashViewModel {
+import androidx.lifecycle.ViewModel
+
+class SplashViewModel : ViewModel() {
+
 }
