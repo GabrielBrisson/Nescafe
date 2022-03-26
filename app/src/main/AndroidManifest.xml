@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nescafe">
         <activity
+            android:name=".features.main.ui.activity.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".features.splash.ui.activity.SplashActivity"
             android:exported="true">
             <intent-filter>
