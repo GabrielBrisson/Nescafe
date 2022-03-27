@@ -30,7 +30,7 @@
         tools:layout="@layout/fragment_assemble_box" />
     <fragment
         android:id="@+id/itemProfile"
-        android:name="com.dolcegusto.nescafe.features.main.ui.fragments.ProfileFragment"
+        android:name="com.dolcegusto.nescafe.features.profile.ui.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 
