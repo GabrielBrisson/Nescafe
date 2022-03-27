@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/itemFlavors"
+        android:enabled="true"
+        android:icon="@drawable/ic_coffee_capsule"
+        android:title="@string/flavors" />
+
+    <item
+        android:id="@+id/itemMachines"
+        android:enabled="true"
+        android:icon="@drawable/ic_coffee_maker"
+        android:title="@string/machines" />
+    <item
+        android:id="@+id/itemAssembleBox"
+        android:enabled="true"
+        android:icon="@drawable/ic_box"
+        android:title="@string/assemble_box" />
+
+    <item
+        android:id="@+id/itemProfile"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/profile" />
+</menu>
