@@ -3,16 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/gabri/AndroidStudioProjects/Nescafe/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19" />
-        <entry key="..\:/Users/gabri/AndroidStudioProjects/Nescafe/app/src/main/res/drawable/bottom_item_background_color.xml" value="0.228" />
-        <entry key="..\:/Users/gabri/AndroidStudioProjects/Nescafe/app/src/main/res/drawable/ic_dolce_gusto.xml" value="0.19" />
-        <entry key="..\:/Users/gabri/AndroidStudioProjects/Nescafe/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19" />
-        <entry key="..\:/Users/gabri/AndroidStudioProjects/Nescafe/app/src/main/res/drawable/ic_person.xml" value="0.228" />
-        <entry key="..\:/Users/gabri/AndroidStudioProjects/Nescafe/app/src/main/res/drawable/splash_image.xml" value="0.19" />
-        <entry key="..\:/Users/gabri/AndroidStudioProjects/Nescafe/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/gabri/AndroidStudioProjects/Nescafe/app/src/main/res/layout/activity_splash.xml" value="0.33" />
-        <entry key="..\:/Users/gabri/AndroidStudioProjects/Nescafe/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.346875" />
-        <entry key="..\:/Users/gabri/AndroidStudioProjects/Nescafe/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19" />
+        <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/layout/activity_main.xml" value="0.3527777777777778" />
+        <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/layout/activity_nav_host.xml" value="0.25555555555555554" />
+        <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/layout/activity_splash.xml" value="0.33" />
       </map>
     </option>
   </component>
