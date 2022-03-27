@@ -11,10 +11,10 @@
         android:theme="@style/Theme.Nescafe">
 
         <activity
-            android:name=".features.main.ui.activity.MainActivity"
+            android:name=".features.main.ui.activities.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".features.splash.ui.activity.SplashActivity"
+            android:name=".features.splash.ui.activities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

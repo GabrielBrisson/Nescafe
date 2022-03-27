@@ -1,4 +1,4 @@
-package com.dolcegusto.nescafe.features.splash.ui.activity
+package com.dolcegusto.nescafe.features.splash.ui.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.dolcegusto.nescafe.databinding.ActivitySplashBinding
-import com.dolcegusto.nescafe.features.main.ui.activity.MainActivity
+import com.dolcegusto.nescafe.features.main.ui.activities.MainActivity
 
 
 class SplashActivity : AppCompatActivity() {
