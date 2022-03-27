@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Nescafe</string>
+    <string name="flavors">Flavors</string>
+    <string name="machines">Machines</string>
+    <string name="assemble_box">Assemble your box</string>
+    <string name="profile">Profile</string>
 </resources>
