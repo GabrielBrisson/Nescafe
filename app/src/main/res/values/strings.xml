@@ -1,7 +1,15 @@
 <resources>
     <string name="app_name">Nescafe</string>
+
+    <!--  Bottom Menu  -->
+    <string name="home">Home</string>
     <string name="flavors">Flavors</string>
     <string name="machines">Machines</string>
     <string name="assemble_box">Assemble your box</string>
     <string name="profile">Profile</string>
+
+    <!--  ImageView Descriptions  -->
+    <string name="image_description_shopping_bag">shopping bag icon</string>
+    <string name="image_description_search">search icon</string>
+
 </resources>
