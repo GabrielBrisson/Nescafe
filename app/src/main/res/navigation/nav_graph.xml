@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/itemHome"
-        android:name="com.dolcegusto.nescafe.features.main.ui.fragments.HomeFragment"
+        android:name="com.dolcegusto.nescafe.features.home.ui.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
 
