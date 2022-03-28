@@ -2,13 +2,20 @@ package com.dolcegusto.nescafe.app.di
 
 import com.dolcegusto.nescafe.features.profile.data.repository.ProfileRepository
 import com.dolcegusto.nescafe.features.profile.data.repository.ProfileRepositoryImpl
-import com.dolcegusto.nescafe.features.profile.ui.viewmodel.ProfileViewModel
-import org.koin.androidx.viewmodel.dsl.viewModel
-import org.koin.dsl.module
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
-val appModule = module {
+@Module
+@InstallIn(SingletonComponent::class)
+object AppModule {
 
-    single<ProfileRepository> { ProfileRepositoryImpl() }
-
-    viewModel { ProfileViewModel(get()) }
+    @Provides
+    @Singleton
+    fun providesProfileRepository() : ProfileRepository {
+        return ProfileRepositoryImpl()
+    }
 }
+

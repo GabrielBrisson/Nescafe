@@ -7,7 +7,7 @@ import java.util.Date
 data class Order(
     val id : String,
     val number: String,
-    val date: Date,
+    val date: Long,
     val subtotalPrice: BigDecimal,
     val extraPrice: BigDecimal,
     val totalPrice: BigDecimal,

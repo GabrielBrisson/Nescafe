@@ -12,4 +12,18 @@
     <string name="image_description_shopping_bag">shopping bag icon</string>
     <string name="image_description_search">search icon</string>
 
+    <!--  Profile  -->
+    <string name="profile_title">Profile</string>
+    <string name="recent_orders_title">Recent orders</string>
+    <string name="order_card_number">Order: %s</string>
+    <string name="order_card_date">Order date: %s</string>
+    <string name="order_card_total_price">Price total: R$%s</string>
+    <string name="see_all">See all</string>
+    <!--  Oder status  -->
+    <string name="order_status_waiting_credit_card_confirmation">Waiting credit card confirmation</string>
+    <string name="order_status_separation_process">Separation process</string>
+    <string name="order_status_in_transit">In transit</string>
+    <string name="order_status_in_sent">Sent</string>
+
+
 </resources>

@@ -1,7 +1,10 @@
 package com.dolcegusto.nescafe.features.splash.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class SplashViewModel : ViewModel() {
+@HiltViewModel
+class SplashViewModel @Inject constructor(): ViewModel() {
 
 }
