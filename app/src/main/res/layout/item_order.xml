@@ -6,9 +6,9 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/black"
-    card_view:cardCornerRadius="10dp"
+    card_view:cardCornerRadius="5dp"
     android:layout_margin="8dp"
-    card_view:cardElevation="8dp">
+    card_view:cardElevation="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"

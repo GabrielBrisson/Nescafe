@@ -11,14 +11,21 @@
     <!--  ImageView Descriptions  -->
     <string name="image_description_shopping_bag">shopping bag icon</string>
     <string name="image_description_search">search icon</string>
+    <string name="image_description_signature">signature icon</string>
 
     <!--  Profile  -->
     <string name="profile_title">Profile</string>
+    <string name="fidelity_points">%s Fidelity club points</string>
     <string name="recent_orders_title">Recent orders</string>
     <string name="order_card_number">Order: %s</string>
     <string name="order_card_date">Order date: %s</string>
     <string name="order_card_total_price">Price total: R$%s</string>
     <string name="see_all">See all</string>
+    <string name="sign_now">Sign now</string>
+    <string name="my_coupons">My coupons</string>
+    <string name="account_information">Account information</string>
+    <string name="points_program">Points program</string>
+    <string name="logout">Logout</string>
     <!--  Oder status  -->
     <string name="order_status_waiting_credit_card_confirmation">Waiting credit card confirmation</string>
     <string name="order_status_separation_process">Separation process</string>

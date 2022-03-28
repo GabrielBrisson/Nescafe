@@ -3,6 +3,7 @@ package com.dolcegusto.nescafe.features.profile.ui.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.recyclerview.widget.RecyclerView
 import com.dolcegusto.nescafe.R
 import com.dolcegusto.nescafe.app.util.Enums
@@ -32,18 +33,18 @@ class OrderAdapter(
             when (item.status) {
                 Enums.OrderStatus.WAITING_CREDIT_CARD_CONFIRMATION -> {
                     binding.tvOrderStatus.text = context.getString(R.string.order_status_waiting_credit_card_confirmation)
-                    binding.viewStatus1.background = context.getDrawable(R.color.waiting_credit_card_confirmation)
+                    binding.viewStatus1.background = AppCompatResources.getDrawable(context, R.color.waiting_credit_card_confirmation)
                 }
                 Enums.OrderStatus.SEPARATION_PROCESS -> {
                     binding.tvOrderStatus.text = context.getString(R.string.order_status_separation_process)
-                    with (context.resources.getDrawable(R.color.separation_process, null)) {
+                    with (AppCompatResources.getDrawable(context, R.color.separation_process)) {
                         binding.viewStatus1.background = this
                         binding.viewStatus2.background = this
                     }
                 }
                 Enums.OrderStatus.IN_TRANSIT -> {
                     binding.tvOrderStatus.text = context.getString(R.string.order_status_in_transit)
-                    with (context.resources.getDrawable(R.color.in_transit, null)) {
+                    with (AppCompatResources.getDrawable(context, R.color.in_transit)) {
                         binding.viewStatus1.background = this
                         binding.viewStatus2.background = this
                         binding.viewStatus3.background = this
@@ -51,7 +52,7 @@ class OrderAdapter(
                 }
                 Enums.OrderStatus.SENT -> {
                     binding.tvOrderStatus.text = context.getString(R.string.order_status_in_sent)
-                    with (context.resources.getDrawable(R.color.sent, null)) {
+                    with (AppCompatResources.getDrawable(context, R.color.sent)) {
                         binding.viewStatus1.background = this
                         binding.viewStatus2.background = this
                         binding.viewStatus3.background = this
