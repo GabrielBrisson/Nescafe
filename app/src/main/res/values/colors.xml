@@ -20,9 +20,20 @@
     <color name="night_surface">#1C1B1F</color>
     <color name="night_on_surface">#E6E1E5</color>
 
+    <!--  Neutrals  -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="grey">#8A8A8A</color>
+    <color name="grey">#adb5bd</color>
+
+    <!--  Order status colors  -->
+    <color name="waiting_credit_card_confirmation">#ef476f</color>
+    <color name="separation_process">#ffd166</color>
+    <color name="in_transit">#118ab2</color>
+    <color name="sent">#06d6a0</color>
+
+    <color name="white_50_transparent">#80FFFFFF</color>
 
     <color name="error">#B3261E</color>
+
+
 </resources>

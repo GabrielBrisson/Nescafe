@@ -17,4 +17,7 @@ class MachinesFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_machines, container, false)
     }
 
+    companion object {
+        fun newInstance() = MachinesFragment()
+    }
 }

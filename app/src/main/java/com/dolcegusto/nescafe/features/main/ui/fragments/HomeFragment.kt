@@ -20,4 +20,8 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
+
+    companion object {
+        fun newInstance() = HomeFragment()
+    }
 }

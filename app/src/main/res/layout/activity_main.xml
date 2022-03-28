@@ -43,11 +43,11 @@
             android:layout_marginEnd="5dp"
             android:contentDescription="@string/image_description_search"
             android:padding="5dp"
-            android:src="@drawable/ic_round_search_24" />
+            android:src="@drawable/ic_search" />
 
     </androidx.appcompat.widget.Toolbar>
 
-    <androidx.fragment.app.FragmentContainerView
+    <fragment
         android:id="@+id/containerNavHost"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"

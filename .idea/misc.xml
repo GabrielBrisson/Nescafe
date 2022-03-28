@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/drawable/bottom_navigation_item_color.xml" value="0.2245" />
+        <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/drawable/ic_coupon.xml" value="0.226" />
         <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/drawable/ic_dolce_gusto.xml" value="0.2245" />
+        <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/drawable/ic_icons8_coupon_60.xml" value="0.226" />
         <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/drawable/splash_image.xml" value="0.2245" />
         <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/layout/activity_main.xml" value="0.3527777777777778" />
         <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/layout/activity_nav_host.xml" value="0.25555555555555554" />
@@ -13,8 +15,11 @@
         <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/layout/fragment_flavors.xml" value="0.3625" />
         <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/layout/fragment_home.xml" value="0.3625" />
         <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/layout/fragment_machines.xml" value="0.3625" />
-        <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/layout/fragment_profile.xml" value="0.3625" />
+        <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
+        <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/layout/item_order.xml" value="0.5979381443298969" />
         <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.3625" />
+        <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.226" />
+        <entry key="..\:/Users/Guilherme/AndroidStudioProjects/Nescafe/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.226" />
       </map>
     </option>
   </component>

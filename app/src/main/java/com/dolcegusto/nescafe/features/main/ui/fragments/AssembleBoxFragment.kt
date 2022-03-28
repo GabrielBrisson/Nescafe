@@ -18,4 +18,8 @@ class AssembleBoxFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_assemble_box, container, false)
     }
 
+    companion object {
+        fun newInstance() = AssembleBoxFragment()
+    }
+
 }
