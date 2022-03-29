@@ -5,7 +5,7 @@
     <color name="light_on_primary">#ffffff</color>
     <color name="light_secondary">#835500</color>
     <color name="light_on_secondary">#ffffff</color>
-    <color name="light_background">#FFFBFE</color>
+    <color name="light_background">#FEFEFE</color>
     <color name="light_on_background">#1C1B1F</color>
     <color name="light_surface">#FFFBFE</color>
     <color name="light_on_surface">#1C1B1F</color>
@@ -17,7 +17,7 @@
     <color name="night_on_secondary">#462b00</color>
     <color name="night_background">#1C1B1F</color>
     <color name="night_on_background">#E6E1E5</color>
-    <color name="night_surface">#1C1B1F</color>
+    <color name="night_surface">#28272C</color>
     <color name="night_on_surface">#E6E1E5</color>
 
     <!--  Neutrals  -->

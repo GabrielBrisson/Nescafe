@@ -1,5 +1,6 @@
 package com.dolcegusto.nescafe.features.profile.ui.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.dolcegusto.nescafe.R
 import com.dolcegusto.nescafe.databinding.FragmentProfileBinding
 import com.dolcegusto.nescafe.features.profile.data.model.Order
+import com.dolcegusto.nescafe.features.profile.ui.activities.OrderDetailsActivity
 import com.dolcegusto.nescafe.features.profile.ui.adapter.OrderAdapter
 import com.dolcegusto.nescafe.features.profile.ui.viewmodel.ProfileViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -60,7 +62,15 @@ class ProfileFragment : Fragment() {
         binding.recyclerOrder.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerOrder.adapter = adapter
 
-        adapter.onDetailsClickListener = { }
+        adapter.onDetailsClickListener = { order ->
+            val intent = Intent(requireContext(), OrderDetailsActivity::class.java)
+            intent.putExtra("order", order)
+            startActivity(intent)
+        }
 
+    }
+
+    companion object {
+        fun newInstance() = ProfileFragment()
     }
 }

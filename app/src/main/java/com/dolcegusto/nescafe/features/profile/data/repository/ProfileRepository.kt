@@ -5,4 +5,6 @@ import com.dolcegusto.nescafe.features.profile.data.model.Order
 interface ProfileRepository {
 
     fun getOrders() : List<Order>
+
+    fun findOrderById(id: String) : Order?
 }

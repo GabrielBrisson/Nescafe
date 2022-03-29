@@ -11,6 +11,10 @@ class ProfileRepositoryImpl @Inject constructor(): ProfileRepository {
         return mockedOrderList
     }
 
+    override fun findOrderById(id: String): Order? {
+        return mockedOrderList.find { it.id == id }
+    }
+
     private val mockedOrderList: List<Order> = listOf(
         Order(
             id = "1",
@@ -32,10 +36,11 @@ class ProfileRepositoryImpl @Inject constructor(): ProfileRepository {
                 "Chococino Caramel",
                 "Mocha",
                 "Nestea Limão"
-            )
+            ),
+            trackNumber = "FR220327Y9XBN"
         ),
         Order(
-            id = "1",
+            id = "2",
             number = "BRR2982123",
             date = 1648227480000,
             subtotalPrice = BigDecimal("87.55"),
@@ -54,10 +59,11 @@ class ProfileRepositoryImpl @Inject constructor(): ProfileRepository {
                 "Chococino Caramel",
                 "Mocha",
                 "Nestea Limão"
-            )
+            ),
+            trackNumber = "FR220327Y9XBN"
         ),
         Order(
-            id = "1",
+            id = "3",
             number = "BRR2982123",
             date = 1648227480000,
             subtotalPrice = BigDecimal("87.55"),
@@ -76,10 +82,11 @@ class ProfileRepositoryImpl @Inject constructor(): ProfileRepository {
                 "Chococino Caramel",
                 "Mocha",
                 "Nestea Limão"
-            )
+            ),
+            trackNumber = "FR220327Y9XBN"
         ),
         Order(
-            id = "1",
+            id = "4",
             number = "BRR2982123",
             date = 1648227480000,
             subtotalPrice = BigDecimal("87.55"),
@@ -98,7 +105,8 @@ class ProfileRepositoryImpl @Inject constructor(): ProfileRepository {
                 "Chococino Caramel",
                 "Mocha",
                 "Nestea Limão"
-            )
+            ),
+            trackNumber = "FR220327Y9XBN"
         )
     )
 
