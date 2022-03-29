@@ -1,4 +1,4 @@
-package com.dolcegusto.nescafe.features.profile.ui.viewmodel
+package com.dolcegusto.nescafe.features.profile.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
 import com.dolcegusto.nescafe.app.data.model.User
@@ -12,7 +12,6 @@ import javax.inject.Inject
 class ProfileViewModel @Inject constructor(
     private val profileRepository: ProfileRepository,
     private val userRepository: UserRepository
-//    private val navController: NavController
 ) : ViewModel() {
 
     val user : User = userRepository.getUser()

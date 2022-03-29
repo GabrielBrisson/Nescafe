@@ -37,6 +37,7 @@
             android:textColor="?attr/colorOnBackground"
             android:textSize="28sp"
             android:textStyle="bold"
+            android:layout_marginTop="14dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvProfileTitle"

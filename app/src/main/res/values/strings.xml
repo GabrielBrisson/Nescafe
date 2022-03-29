@@ -20,12 +20,21 @@
     <string name="order_card_number">Order: %s</string>
     <string name="order_card_date">Order date: %s</string>
     <string name="order_card_total_price">Price total: R$%s</string>
+    <string name="order_track_number">Track number: %s</string>
     <string name="see_all">See all</string>
     <string name="sign_now">Sign now</string>
     <string name="my_coupons">My coupons</string>
     <string name="account_information">Account information</string>
     <string name="points_program">Points program</string>
     <string name="logout">Logout</string>
+    <string name="purchased_products">Products purchased</string>
+    <string name="order_summary">Order summary</string>
+    <string name="sub_total">Sub total</string>
+    <string name="shipping_and_handling">Shipping and handling</string>
+    <string name="total">Total</string>
+    <string name="order_detail_title">Order: %s</string>
+    <string name="track_number">Track number: %s</string>
+    <string name="currency_real_value">R$%s</string>
     <!--  Oder status  -->
     <string name="order_status_waiting_credit_card_confirmation">Waiting credit card confirmation</string>
     <string name="order_status_separation_process">Separation process</string>

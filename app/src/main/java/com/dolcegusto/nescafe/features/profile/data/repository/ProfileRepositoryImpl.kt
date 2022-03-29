@@ -11,13 +11,17 @@ class ProfileRepositoryImpl @Inject constructor(): ProfileRepository {
         return mockedOrderList
     }
 
+    override fun findOrderById(id: String): Order? {
+        return mockedOrderList.find { it.id == id }
+    }
+
     private val mockedOrderList: List<Order> = listOf(
         Order(
             id = "1",
             number = "BRR2982123",
             date = 1648227480000,
             subtotalPrice = BigDecimal("87.55"),
-            extraPrice = BigDecimal("12.60"),
+            shippingAndHandlingPrice = BigDecimal("12.60"),
             totalPrice = BigDecimal("100.15"),
             status = Enums.OrderStatus.WAITING_CREDIT_CARD_CONFIRMATION,
             productList = listOf(
@@ -32,14 +36,15 @@ class ProfileRepositoryImpl @Inject constructor(): ProfileRepository {
                 "Chococino Caramel",
                 "Mocha",
                 "Nestea Limão"
-            )
+            ),
+            trackNumber = "FR220327Y9XBN"
         ),
         Order(
-            id = "1",
+            id = "2",
             number = "BRR2982123",
             date = 1648227480000,
             subtotalPrice = BigDecimal("87.55"),
-            extraPrice = BigDecimal("12.60"),
+            shippingAndHandlingPrice = BigDecimal("12.60"),
             totalPrice = BigDecimal("100.15"),
             status = Enums.OrderStatus.SEPARATION_PROCESS,
             productList = listOf(
@@ -54,14 +59,15 @@ class ProfileRepositoryImpl @Inject constructor(): ProfileRepository {
                 "Chococino Caramel",
                 "Mocha",
                 "Nestea Limão"
-            )
+            ),
+            trackNumber = "FR220327Y9XBN"
         ),
         Order(
-            id = "1",
+            id = "3",
             number = "BRR2982123",
             date = 1648227480000,
             subtotalPrice = BigDecimal("87.55"),
-            extraPrice = BigDecimal("12.60"),
+            shippingAndHandlingPrice = BigDecimal("12.60"),
             totalPrice = BigDecimal("100.15"),
             status = Enums.OrderStatus.IN_TRANSIT,
             productList = listOf(
@@ -76,14 +82,15 @@ class ProfileRepositoryImpl @Inject constructor(): ProfileRepository {
                 "Chococino Caramel",
                 "Mocha",
                 "Nestea Limão"
-            )
+            ),
+            trackNumber = "FR220327Y9XBN"
         ),
         Order(
-            id = "1",
+            id = "4",
             number = "BRR2982123",
             date = 1648227480000,
             subtotalPrice = BigDecimal("87.55"),
-            extraPrice = BigDecimal("12.60"),
+            shippingAndHandlingPrice = BigDecimal("12.60"),
             totalPrice = BigDecimal("100.15"),
             status = Enums.OrderStatus.SENT,
             productList = listOf(
@@ -98,7 +105,8 @@ class ProfileRepositoryImpl @Inject constructor(): ProfileRepository {
                 "Chococino Caramel",
                 "Mocha",
                 "Nestea Limão"
-            )
+            ),
+            trackNumber = "FR220327Y9XBN"
         )
     )
 
