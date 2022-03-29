@@ -3,6 +3,7 @@ package com.dolcegusto.nescafe.features.profile.ui.activities
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
@@ -11,7 +12,7 @@ import com.dolcegusto.nescafe.app.util.Enums
 import com.dolcegusto.nescafe.app.util.toDateFormat
 import com.dolcegusto.nescafe.databinding.ActivityOrderDetailsBinding
 import com.dolcegusto.nescafe.features.profile.data.model.Order
-import com.dolcegusto.nescafe.features.profile.ui.viewmodel.OrderViewModel
+import com.dolcegusto.nescafe.features.profile.ui.viewmodels.OrderViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -20,6 +21,7 @@ class OrderDetailsActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityOrderDetailsBinding
     private val viewModel: OrderViewModel by viewModels()
+    private var order: Order? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,17 +29,35 @@ class OrderDetailsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         viewModel.setOrder(intent.extras?.getSerializable("order") as Order)
+        order = viewModel.getOrder()
 
         setupOrderCardUI()
         setupToolbar()
 
+        order?.let {
+            with(binding) {
+                tvSubtotalPriceValue.text = getString(
+                        R.string.currency_real_value,
+                        order!!.subtotalPrice.toString()
+                )
+
+                tvShippingAndHandlingPriceValue.text = getString(
+                    R.string.currency_real_value,
+                    order!!.shippingAndHandlingPrice.toString()
+                )
+
+                tvPriceTotalValue.text = getString(
+                    R.string.currency_real_value,
+                    order!!.totalPrice.toString()
+                )
+            }
+        }
+
     }
 
     private fun setupToolbar() {
-        val order = viewModel.getOrder()
-
         order?.let {
-            binding.tvTitle.text = getString(R.string.order_detail_title, order.number)
+            binding.tvTitle.text = getString(R.string.order_detail_title, order!!.number)
         }
         binding.toolbar.setNavigationOnClickListener {
             onBackPressed()
@@ -45,19 +65,24 @@ class OrderDetailsActivity : AppCompatActivity() {
     }
 
     private fun setupOrderCardUI() {
-        val order = viewModel.getOrder()
-
         order?.let {
             with(binding) {
-                tvOrderTitle.text = getString(R.string.order_detail_title, order.number)
-                tvOrderDate.text = getString(R.string.order_card_date, order.date.toDateFormat())
-                tvOrderTotalPrice.text = getString(R.string.order_card_total_price, order.totalPrice.toString())
-                tvTrackNumber.text = getString(R.string.track_number, order.trackNumber)
-                tvTrackNumber.setOnClickListener {
-                    openTrackNumberWebsite(order.trackNumber)
+                tvOrderTitle.text = getString(R.string.order_detail_title, order!!.number)
+                tvOrderDate.text = getString(R.string.order_card_date, order!!.date.toDateFormat())
+                tvOrderTotalPrice.text =
+                    getString(R.string.order_card_total_price, order!!.totalPrice.toString())
+
+                if (order!!.trackNumber.isNullOrEmpty()) {
+                    tvTrackNumber.visibility = View.GONE
+                } else {
+                    tvTrackNumber.visibility = View.VISIBLE
+                    tvTrackNumber.text = getString(R.string.track_number, order!!.trackNumber)
+                    tvTrackNumber.setOnClickListener {
+                        openTrackNumberWebsite(order!!.trackNumber!!)
+                    }
                 }
 
-                when (order.status) {
+                when (order!!.status) {
                     Enums.OrderStatus.WAITING_CREDIT_CARD_CONFIRMATION -> {
                         tvOrderStatus.text =
                             getString(R.string.order_status_waiting_credit_card_confirmation)
@@ -108,7 +133,10 @@ class OrderDetailsActivity : AppCompatActivity() {
     }
 
     private fun openTrackNumberWebsite(tracNumber: String) {
-        val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ondeestameupedido.com.br/${tracNumber}"))
+        val browserIntent = Intent(
+            Intent.ACTION_VIEW,
+            Uri.parse("https://www.ondeestameupedido.com.br/${tracNumber}")
+        )
         startActivity(browserIntent)
     }
 }

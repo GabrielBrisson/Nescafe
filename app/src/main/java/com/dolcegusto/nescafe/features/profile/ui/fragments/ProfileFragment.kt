@@ -13,7 +13,7 @@ import com.dolcegusto.nescafe.databinding.FragmentProfileBinding
 import com.dolcegusto.nescafe.features.profile.data.model.Order
 import com.dolcegusto.nescafe.features.profile.ui.activities.OrderDetailsActivity
 import com.dolcegusto.nescafe.features.profile.ui.adapter.OrderAdapter
-import com.dolcegusto.nescafe.features.profile.ui.viewmodel.ProfileViewModel
+import com.dolcegusto.nescafe.features.profile.ui.viewmodels.ProfileViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

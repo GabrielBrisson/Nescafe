@@ -1,4 +1,4 @@
-package com.dolcegusto.nescafe.features.profile.ui.viewmodel
+package com.dolcegusto.nescafe.features.profile.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
 import com.dolcegusto.nescafe.features.profile.data.model.Order

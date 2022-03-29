@@ -10,9 +10,9 @@ data class Order(
     val number: String,
     val date: Long,
     val subtotalPrice: BigDecimal,
-    val extraPrice: BigDecimal,
+    val shippingAndHandlingPrice: BigDecimal,
     val totalPrice: BigDecimal,
     val status : Enums.OrderStatus,
     val productList: List<String>,
-    val trackNumber: String
+    val trackNumber: String?
 ) : Serializable
