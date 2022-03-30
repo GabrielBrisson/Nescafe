@@ -7,12 +7,14 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.dolcegusto.nescafe.R
 import com.dolcegusto.nescafe.app.util.Enums
 import com.dolcegusto.nescafe.app.util.toDateFormat
 import com.dolcegusto.nescafe.databinding.ActivityOrderDetailsBinding
 import com.dolcegusto.nescafe.features.profile.data.model.Order
-import com.dolcegusto.nescafe.features.profile.ui.viewmodels.OrderViewModel
+import com.dolcegusto.nescafe.features.profile.ui.adapter.ProductAdapter
+import com.dolcegusto.nescafe.features.profile.ui.viewmodels.OrderDetailsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -20,7 +22,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class OrderDetailsActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityOrderDetailsBinding
-    private val viewModel: OrderViewModel by viewModels()
+    private val viewModel: OrderDetailsViewModel by viewModels()
     private var order: Order? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +35,7 @@ class OrderDetailsActivity : AppCompatActivity() {
 
         setupOrderCardUI()
         setupToolbar()
+        setupProductsAdapter()
 
         order?.let {
             with(binding) {
@@ -52,6 +55,15 @@ class OrderDetailsActivity : AppCompatActivity() {
                 )
             }
         }
+
+    }
+
+    private fun setupProductsAdapter() {
+        val products = viewModel.getProducts()
+        val adapter = ProductAdapter(this, products)
+
+        binding.recyclerProducts.adapter = adapter
+        binding.recyclerProducts.layoutManager = LinearLayoutManager(this)
 
     }
 

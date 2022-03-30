@@ -35,6 +35,8 @@
     <string name="order_detail_title">Order: %s</string>
     <string name="track_number">Track number: %s</string>
     <string name="currency_real_value">R$%s</string>
+    <string name="item_product_quantity">%d x</string>
+    <string name="order_details">Details</string>
     <!--  Oder status  -->
     <string name="order_status_waiting_credit_card_confirmation">Waiting credit card confirmation</string>
     <string name="order_status_separation_process">Separation process</string>
