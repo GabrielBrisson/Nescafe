@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dolcegusto.nescafe.R
+import com.dolcegusto.nescafe.app.ui.activities.SeeAllActivity
+import com.dolcegusto.nescafe.app.util.Enums
 import com.dolcegusto.nescafe.databinding.FragmentProfileBinding
 import com.dolcegusto.nescafe.features.profile.data.model.Order
 import com.dolcegusto.nescafe.features.profile.ui.activities.OrderDetailsActivity
@@ -42,12 +44,15 @@ class ProfileFragment : Fragment() {
 
             tvUserName.text = user.fullName
             tvFidelityPoints.text = getString(R.string.fidelity_points, user.fidelityPoints.toString())
+            tvSeeAllOrders.setOnClickListener {
+                startSeeAllActivity(ArrayList(viewModel.orders))
+            }
         }
     }
 
     private fun setupOrdersUI() {
+        // showing only 2 first orders
         val orders = viewModel.orders
-
         if (orders.size > 2) {
             binding.tvSeeAllOrders.visibility = View.VISIBLE
 
@@ -63,11 +68,24 @@ class ProfileFragment : Fragment() {
         binding.recyclerOrder.adapter = adapter
 
         adapter.onDetailsClickListener = { order ->
-            val intent = Intent(requireContext(), OrderDetailsActivity::class.java)
-            intent.putExtra("order", order)
-            startActivity(intent)
+            startOrderDetailActivity(order)
         }
 
+    }
+
+    private fun startOrderDetailActivity(order: Order?) {
+        val intent = Intent(requireContext(), OrderDetailsActivity::class.java)
+
+        intent.putExtra(OrderDetailsActivity.ORDER, order)
+        startActivity(intent)
+    }
+
+    private fun startSeeAllActivity(orderList: ArrayList<Order>?) {
+        val intent = Intent(requireContext(), SeeAllActivity::class.java)
+
+        intent.putExtra(SeeAllActivity.SEE_ALL_TYPE, Enums.SeeAllContentType.ORDER)
+        intent.putExtra(SeeAllActivity.SEE_ALL_CONTENT, orderList)
+        startActivity(intent)
     }
 
     companion object {

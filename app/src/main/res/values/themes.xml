@@ -24,4 +24,11 @@
         <item name="itemIconTint">@drawable/bottom_navigation_item_color</item>
         <item name="itemTextColor">@drawable/bottom_navigation_item_color</item>
     </style>
+
+    <style name="Text.AppBarTitle" parent="TextAppearance.AppCompat" >
+        <item name="color">?attr/colorOnSurface</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
 </resources>

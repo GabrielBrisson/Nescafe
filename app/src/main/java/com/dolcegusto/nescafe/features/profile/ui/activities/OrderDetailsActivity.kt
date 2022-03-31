@@ -30,7 +30,7 @@ class OrderDetailsActivity : AppCompatActivity() {
         binding = ActivityOrderDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewModel.setOrder(intent.extras?.getSerializable("order") as Order)
+        viewModel.setOrder(intent.extras?.getSerializable(ORDER) as Order)
         order = viewModel.getOrder()
 
         setupOrderCardUI()
@@ -150,5 +150,9 @@ class OrderDetailsActivity : AppCompatActivity() {
             Uri.parse("https://www.ondeestameupedido.com.br/${tracNumber}")
         )
         startActivity(browserIntent)
+    }
+
+    companion object {
+        const val ORDER = "order"
     }
 }
