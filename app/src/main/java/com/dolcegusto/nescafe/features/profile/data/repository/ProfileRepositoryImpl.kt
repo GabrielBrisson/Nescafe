@@ -1,5 +1,6 @@
 package com.dolcegusto.nescafe.features.profile.data.repository
 
+import com.dolcegusto.nescafe.app.data.model.Product
 import com.dolcegusto.nescafe.app.util.Enums
 import com.dolcegusto.nescafe.features.profile.data.model.Order
 import java.math.BigDecimal
@@ -15,6 +16,20 @@ class ProfileRepositoryImpl @Inject constructor(): ProfileRepository {
         return mockedOrderList.find { it.id == id }
     }
 
+    private val mockedProducts: List<Product> = listOf(
+        Product("1","Citrus Honey Tea", 2 ),
+        Product("2","Café Au Lait Vanilla", 2 ),
+        Product("3","Café Caseiro", 3 ),
+        Product("4","Lungo", 2 ),
+        Product("5","Mochaccino Canela", 5 ),
+        Product("6","Cappuccino", 5 ),
+        Product("7","Chococino Alpino", 5 ),
+        Product("8","Chococino", 3 ),
+        Product("9","Chococino Caramel", 5 ),
+        Product("10","Mocha", 3 ),
+        Product("11","Nestea Limão", 3 )
+    )
+
     private val mockedOrderList: List<Order> = listOf(
         Order(
             id = "1",
@@ -24,19 +39,7 @@ class ProfileRepositoryImpl @Inject constructor(): ProfileRepository {
             shippingAndHandlingPrice = BigDecimal("12.60"),
             totalPrice = BigDecimal("100.15"),
             status = Enums.OrderStatus.WAITING_CREDIT_CARD_CONFIRMATION,
-            productList = listOf(
-                "Citrus Honey Tea",
-                "Café Au Lait Vanilla",
-                "Café Caseiro",
-                "Lungo",
-                "Mochaccino Canela",
-                "Cappuccino",
-                "Chococino Alpino",
-                "Chococino",
-                "Chococino Caramel",
-                "Mocha",
-                "Nestea Limão"
-            ),
+            productList = mockedProducts,
             trackNumber = "FR220327Y9XBN"
         ),
         Order(
@@ -47,19 +50,7 @@ class ProfileRepositoryImpl @Inject constructor(): ProfileRepository {
             shippingAndHandlingPrice = BigDecimal("12.60"),
             totalPrice = BigDecimal("100.15"),
             status = Enums.OrderStatus.SEPARATION_PROCESS,
-            productList = listOf(
-                "Citrus Honey Tea",
-                "Café Au Lait Vanilla",
-                "Café Caseiro",
-                "Lungo",
-                "Mochaccino Canela",
-                "Cappuccino",
-                "Chococino Alpino",
-                "Chococino",
-                "Chococino Caramel",
-                "Mocha",
-                "Nestea Limão"
-            ),
+            productList = mockedProducts,
             trackNumber = "FR220327Y9XBN"
         ),
         Order(
@@ -70,19 +61,7 @@ class ProfileRepositoryImpl @Inject constructor(): ProfileRepository {
             shippingAndHandlingPrice = BigDecimal("12.60"),
             totalPrice = BigDecimal("100.15"),
             status = Enums.OrderStatus.IN_TRANSIT,
-            productList = listOf(
-                "Citrus Honey Tea",
-                "Café Au Lait Vanilla",
-                "Café Caseiro",
-                "Lungo",
-                "Mochaccino Canela",
-                "Cappuccino",
-                "Chococino Alpino",
-                "Chococino",
-                "Chococino Caramel",
-                "Mocha",
-                "Nestea Limão"
-            ),
+            productList = mockedProducts,
             trackNumber = "FR220327Y9XBN"
         ),
         Order(
@@ -93,19 +72,7 @@ class ProfileRepositoryImpl @Inject constructor(): ProfileRepository {
             shippingAndHandlingPrice = BigDecimal("12.60"),
             totalPrice = BigDecimal("100.15"),
             status = Enums.OrderStatus.SENT,
-            productList = listOf(
-                "Citrus Honey Tea",
-                "Café Au Lait Vanilla",
-                "Café Caseiro",
-                "Lungo",
-                "Mochaccino Canela",
-                "Cappuccino",
-                "Chococino Alpino",
-                "Chococino",
-                "Chococino Caramel",
-                "Mocha",
-                "Nestea Limão"
-            ),
+            productList = mockedProducts,
             trackNumber = "FR220327Y9XBN"
         )
     )

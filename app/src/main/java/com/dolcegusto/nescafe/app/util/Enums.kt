@@ -8,4 +8,8 @@ class Enums {
         IN_TRANSIT("in_transit"),
         SENT("sent")
     }
+
+    enum class SeeAllContentType() {
+        ORDER()
+    }
 }

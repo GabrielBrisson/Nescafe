@@ -35,7 +35,11 @@
     <string name="order_detail_title">Order: %s</string>
     <string name="track_number">Track number: %s</string>
     <string name="currency_real_value">R$%s</string>
-    <!--  Oder status  -->
+    <string name="item_product_quantity">%d x</string>
+    <string name="order_details">Details</string>
+    <!--  See All Titles -->
+    <string name="my_orders">My orders</string>
+    <!--  Order status  -->
     <string name="order_status_waiting_credit_card_confirmation">Waiting credit card confirmation</string>
     <string name="order_status_separation_process">Separation process</string>
     <string name="order_status_in_transit">In transit</string>
