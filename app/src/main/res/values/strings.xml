@@ -44,6 +44,6 @@
     <string name="order_status_separation_process">Separation process</string>
     <string name="order_status_in_transit">In transit</string>
     <string name="order_status_in_sent">Sent</string>
-
+    <string name="do_not_have_account">Don\'t have account? <b>Sign-up</b></string>
 
 </resources>

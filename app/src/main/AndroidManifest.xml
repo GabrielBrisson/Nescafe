@@ -11,6 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nescafe">
         <activity
+            android:name=".features.auth.ui.activities.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".app.ui.activities.SeeAllActivity"
             android:exported="false" />
         <activity
@@ -19,11 +27,7 @@
         <activity
             android:name=".features.splash.ui.activities.SplashActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".features.profile.ui.activities.OrderDetailsActivity"
