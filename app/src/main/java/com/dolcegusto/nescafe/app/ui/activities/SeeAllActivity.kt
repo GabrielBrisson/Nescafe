@@ -42,6 +42,8 @@ class SeeAllActivity : AppCompatActivity() {
 
     private fun setupUI() {
         with(binding) {
+            toolbar.setNavigationOnClickListener { onBackPressed() }
+
             when (viewModel.getContentType()) {
                 Enums.SeeAllContentType.ORDER -> {
                     tvTitle.text = getString(R.string.my_orders)
