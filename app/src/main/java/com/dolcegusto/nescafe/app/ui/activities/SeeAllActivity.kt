@@ -35,7 +35,6 @@ class SeeAllActivity : AppCompatActivity() {
             viewModel.setContent(it)
         }
 
-        setupRecycler()
         setupUI()
 
     }
@@ -51,6 +50,7 @@ class SeeAllActivity : AppCompatActivity() {
                 else -> Unit
             }
         }
+        setupRecycler()
     }
 
     private fun setupRecycler() {
@@ -58,7 +58,7 @@ class SeeAllActivity : AppCompatActivity() {
 
         when (viewModel.getContentType()) {
             Enums.SeeAllContentType.ORDER -> {
-                viewModel.orderList.observe(this) {
+                viewModel.getOrderList().observe(this) {
                     it?.let { ordersList ->
                         val adapter = OrderAdapter(this, ordersList)
                         binding.recycler.adapter = adapter
@@ -66,7 +66,6 @@ class SeeAllActivity : AppCompatActivity() {
                         adapter.onDetailsClickListener = { order ->
                             startOrderDetailsActivity(order)
                         }
-
                     }
                 }
             }
