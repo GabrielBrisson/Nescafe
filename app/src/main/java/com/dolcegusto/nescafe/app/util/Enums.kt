@@ -10,6 +10,6 @@ class Enums {
     }
 
     enum class SeeAllContentType() {
-        ORDER()
+        ORDER
     }
 }

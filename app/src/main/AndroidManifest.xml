@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nescafe">
         <activity
+            android:name=".features.profile.ui.activities.AccountInfoActivity"
+            android:exported="false" />
+        <activity
             android:name=".app.ui.activities.SeeAllActivity"
             android:exported="false" />
         <activity

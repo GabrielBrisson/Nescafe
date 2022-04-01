@@ -13,6 +13,7 @@ import com.dolcegusto.nescafe.app.ui.activities.SeeAllActivity
 import com.dolcegusto.nescafe.app.util.Enums
 import com.dolcegusto.nescafe.databinding.FragmentProfileBinding
 import com.dolcegusto.nescafe.features.profile.data.model.Order
+import com.dolcegusto.nescafe.features.profile.ui.activities.AccountInfoActivity
 import com.dolcegusto.nescafe.features.profile.ui.activities.OrderDetailsActivity
 import com.dolcegusto.nescafe.features.profile.ui.adapter.OrderAdapter
 import com.dolcegusto.nescafe.features.profile.ui.viewmodels.ProfileViewModel
@@ -46,6 +47,11 @@ class ProfileFragment : Fragment() {
             tvFidelityPoints.text = getString(R.string.fidelity_points, user.fidelityPoints.toString())
             tvSeeAllOrders.setOnClickListener {
                 startSeeAllActivity(ArrayList(viewModel.orders))
+            }
+
+            layoutAccountInfo.setOnClickListener {
+                val i = Intent(requireContext(), AccountInfoActivity::class.java)
+                startActivity(i)
             }
         }
     }
