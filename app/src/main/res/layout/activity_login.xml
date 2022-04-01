@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:background="?attr/backgroundColor"
+    android:padding="16dp"
     tools:context=".features.auth.ui.activities.LoginActivity">
 
     <TextView
@@ -60,13 +60,15 @@
 
     <Button
         android:id="@+id/buttonLogin"
-        android:layout_width="230dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingHorizontal="60dp"
         android:layout_marginTop="40dp"
         android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        style="@style/Button.Outlined"/>
 
     <TextView
         android:id="@+id/textDoNotHaveAccount"
@@ -84,13 +86,13 @@
     <View
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:background="@color/grey"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tvContinueWith"
-        app:layout_constraintBottom_toBottomOf="@+id/tvContinueWith"
-        app:layout_constraintTop_toTopOf="@+id/tvContinueWith"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"/>
+        android:layout_marginEnd="10dp"
+        android:background="@color/grey"
+        app:layout_constraintBottom_toBottomOf="@+id/tvContinueWith"
+        app:layout_constraintEnd_toStartOf="@+id/tvContinueWith"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvContinueWith" />
 
     <TextView
         android:id="@+id/tvContinueWith"
@@ -105,12 +107,27 @@
     <View
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:background="@color/grey"
-        app:layout_constraintStart_toEndOf="@+id/tvContinueWith"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/tvContinueWith"
-        app:layout_constraintTop_toTopOf="@+id/tvContinueWith"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"/>
+        android:layout_marginEnd="10dp"
+        android:background="@color/grey"
+        app:layout_constraintBottom_toBottomOf="@+id/tvContinueWith"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvContinueWith"
+        app:layout_constraintTop_toTopOf="@+id/tvContinueWith" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinueWithGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/white"
+        android:text="Continue with Google"
+        style="@style/Widget.Material3.Button.TextButton.Icon"
+        app:icon="@drawable/ic_gmail"
+        app:iconGravity="start"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvContinueWith" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
