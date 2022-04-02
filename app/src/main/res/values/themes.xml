@@ -51,6 +51,12 @@
         <item name="background">?attr/colorPrimary</item>
     </style>
 
+    <style name="Button.OutlinedRounded" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAppearance">@style/Text.ButtonText</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Rounded</item>
+        <item name="strokeColor">?attr/colorPrimary</item>
+    </style>
+
     <style name="Button.Rounded" parent="Button">
         <item name="android:textAppearance">@style/Text.ButtonText</item>
         <item name="shapeAppearance">@style/ShapeAppearance.Rounded</item>

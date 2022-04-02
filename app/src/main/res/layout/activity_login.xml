@@ -58,17 +58,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonLogin"
+        style="@style/Button.OutlinedRounded"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="60dp"
         android:layout_marginTop="40dp"
+        android:paddingHorizontal="60dp"
         android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword"
-        style="@style/Button.Outlined"/>
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
     <TextView
         android:id="@+id/textDoNotHaveAccount"
@@ -117,15 +117,13 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnContinueWithGoogle"
+        style="@style/Button.OutlinedRounded"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:backgroundTint="@color/white"
         android:text="Continue with Google"
-        style="@style/Widget.Material3.Button.TextButton.Icon"
-        app:icon="@drawable/ic_gmail"
-        app:iconGravity="start"
         android:textSize="16sp"
+        app:iconGravity="start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvContinueWith" />
