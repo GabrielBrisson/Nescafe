@@ -1,19 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/backgroundColor"
     android:orientation="vertical"
-    tools:context=".features.main.ui.fragments.AssembleBoxFragment">
+    tools:context=".features.assemblebox.ui.fragments.AssembleBoxFragment">
+
+    <ImageView
+        android:id="@+id/imageBanner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_nescafe_assemble_box_banner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guidelineBanner"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBanner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
 
     <TextView
+        android:id="@+id/textChooseYourBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/assemble_box"
-        android:textAllCaps="true"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"/>
+        android:textAlignment="center"
+        android:text="@string/choose_your_box_size"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:textColor="?attr/colorOnBackground"
+        app:layout_constraintTop_toBottomOf="@id/guidelineBanner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/textChooseYourBox"
+        android:weightSum="2"
+        android:paddingHorizontal="20dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button50"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="@string/button_50"
+            style="@style/Button.Rounded"
+            android:layout_marginEnd="5dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button100"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="@string/button_100"
+            style="@style/Button.Rounded"
+            android:layout_marginStart="5dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textSavedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="?attr/colorOnBackground"
+        android:text="@string/saved_boxes"
+        android:textSize="25sp"
+        android:textAllCaps="true"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
